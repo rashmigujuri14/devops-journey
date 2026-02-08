@@ -1,1 +1,47 @@
-Git and GitHub Basics Notes for DevOps
+# Git & GitHub Basics for DevOps
+
+📌 What is Git?
+Git is a distributed version control system that helps developers track changes in source code, collaborate with teams, and manage project history efficiently.
+
+---
+
+📌 Why Version Control Matters
+
+- ✔ Tracks every change in code
+- ✔ Easy rollback to previous versions
+- ✔ Enables team collaboration
+- ✔ Prevents code conflicts
+- ✔ Essential for DevOps & CI/CD workflows
+
+---
+
+🔄 Git Workflow
+
+Working Directory  
+↓ (git add)  
+Staging Area  
+↓ (git commit)  
+Local Repository  
+↓ (git push)  
+Remote Repository (GitHub)
+
+---
+
+ 📂 Explanation
+
+- **Working Directory** → Where you create or modify files  
+- **Staging Area** → Where you prepare files before saving  
+- **Local Repository** → Where commits are stored  
+- **Remote Repository (GitHub)** → Where code is shared online  
+
+---
+
+ 🛠 Basic Git Commands
+
+```bash
+git init
+git status
+git add .
+git commit -m "message"
+git push origin main
+git pull origin main
