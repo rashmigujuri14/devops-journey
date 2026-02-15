@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DevOps Project Demo</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.container {
+  background: rgba(0,0,0,0.35);
+  padding: 40px;
+  border-radius: 15px;
+  width: 420px;
+  margin: auto;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+button {
+  background: #ff7a18;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #e56700;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer {
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🚀 DevOps Multi-Container Application</h1>
+  <p class="subtitle">Frontend + Backend communication using Docker</p>
+
+  <button onclick="getData()">Check Backend Response</button>
+
+  <p id="result">Click to fetch backend message</p>
+
+  <div class="footer">
+    Built by Rashmi | Learning DevOps Journey
+  </div>
+</div>
+
+<script>
+function getData() {
+  fetch('http://172.16.16.101:5000/api')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("result").innerText = data.message;
+    })
+    .catch(() => {
+      document.getElementById("result").innerText = "❌ Unable to reach backend";
+    });
+}
+</script>
+
+</body>
+</html>
+
